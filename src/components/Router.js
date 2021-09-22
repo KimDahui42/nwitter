@@ -1,0 +1,3 @@
+import { HashRouter as Router,
+
+}
