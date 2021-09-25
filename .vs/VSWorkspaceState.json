@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\src",
+    "\\src\\components",
+    "\\src\\routes"
   ],
-  "SelectedNode": "\\README.md",
+  "SelectedNode": "\\src\\components\\App.js",
   "PreviewInSolutionExplorer": false
 }
