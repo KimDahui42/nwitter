@@ -31,4 +31,7 @@ export가 설정되지 않았다는 설명에 firebase.js 파일 하단에 `export default app;` 
 ## 09.25
 AppRouter 컴포넌트가 라우터 역할을 하면서도 코드의 가독성까지 챙기기 위해서는 App컴포넌트에서 관리하는 것이 좋다.
 JSX에 자바스크립트 코드를 삽입할 때는 코드를 중괄호로 감싸줘야한다.
+파이어베이스 초기화를 위한 firevase.initializeApp(firebassConfig)는 다른 파일에서 참조할 필요가 없으니깐 fbase.js 파일 안에서 실행하도록 코드를 수정
+로그인을 위해 사용, 다른 파일에서 참조한다. 이때 인증 모듈 외의 파이어베이스 관련 모듈을 더 내보낼 수도 있으니 named export를 적용함
+
 
