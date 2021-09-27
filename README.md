@@ -34,4 +34,9 @@ JSX에 자바스크립트 코드를 삽입할 때는 코드를 중괄호로 감싸줘야한다.
 파이어베이스 초기화를 위한 firevase.initializeApp(firebassConfig)는 다른 파일에서 참조할 필요가 없으니깐 fbase.js 파일 안에서 실행하도록 코드를 수정
 로그인을 위해 사용, 다른 파일에서 참조한다. 이때 인증 모듈 외의 파이어베이스 관련 모듈을 더 내보낼 수도 있으니 named export를 적용함
 
-
+## 09.27
+router
+상위 컴포넌트에서 받은 프롭스는 구조 분해 할당으로 사용
+코드 실행시 isLoggedIn은 setIsLoggedIn으로 관리하는 상태로 취급, 초깃값은 false, 로그인 값을 변경할 때 사용
+* 파이어베이스 오류 수정... `auth/invalid-api-key`
+	* .env 파일 `REACT_APP_API_KEY`를 `REACT_APP_API_KET`으로 오타, 수정완료
