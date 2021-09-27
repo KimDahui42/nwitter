@@ -38,5 +38,8 @@ JSX에 자바스크립트 코드를 삽입할 때는 코드를 중괄호로 감싸줘야한다.
 router
 상위 컴포넌트에서 받은 프롭스는 구조 분해 할당으로 사용
 코드 실행시 isLoggedIn은 setIsLoggedIn으로 관리하는 상태로 취급, 초깃값은 false, 로그인 값을 변경할 때 사용
+<br><br>패키지 전체를 import하면 프로그램이 무거워지기 때문에 모듈단위로 import한다.
+<br>CRA로 만든 리액트 프러젝트를 기본으로 index.js파일에 React.StrictMode를 설정한다. 이 설정을 지우지 않으면 console.log 함수가 2번 실행된다(오류를 쉽게 포착하기 위함).
 * 파이어베이스 오류 수정... `auth/invalid-api-key`
 	* .env 파일 `REACT_APP_API_KEY`를 `REACT_APP_API_KET`으로 오타, 수정완료
+	input 엘리먼트에서 email 입력과 password 입력을 구분하기 위해 2가지 함수를 만드는 방법보다 event.target.name으로 input 엘리먼트를 구분하는 방법이 더 효율적
