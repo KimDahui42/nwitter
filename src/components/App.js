@@ -4,6 +4,7 @@ import { authService } from "fbase";
 
 function App() {
     const [isLoggedIn, setIsLoggedIn] = useState(authService.currentUser);
+    setInterval(() => console.log(authService.currentUser), 2000);
     return (
       <>
             <AppRouter isLoggedIn={isLoggedIn} />
