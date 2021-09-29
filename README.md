@@ -51,3 +51,11 @@ Auth.js 파일의 `onSubmit`함수에는 try-catch문으로 에러를 콘솔에 출력하는 코드가 
 * `UseState`함수에 함수를 인자로 전달하면 인자로 전달한 함수의 첫번째 인자(prev)에 이전의 상태가 넘어온다.
 * 소셜 로그인을 구별하려면 `event.target.name`속성을 사용한다.
 * `signWithPopup`함수에 필요한 값들이 다 `provider`에 들어있다(소셜 로그인 업체이름, 현재 사용자 정보, 소셜 로그인 요청 주소 등).
+
+## 09.30
+* 파이어베이스 오류 수정...
+<br>오류 메세지
+```
+FirebaseError: [code=not-found]: The project undefined does not exist or it does not contain an active Cloud Datastore or Cloud Firestore database
+```
+	* .env 파일 `REACT_APP_PROJECT_ID`를 `REACT_APP_PROJECT_I`으로 오타, 수정완료
