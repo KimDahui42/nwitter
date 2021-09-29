@@ -43,3 +43,8 @@ router
 * 파이어베이스 오류 수정... `auth/invalid-api-key`
 	* .env 파일 `REACT_APP_API_KEY`를 `REACT_APP_API_KET`으로 오타, 수정완료
 	input 엘리먼트에서 email 입력과 password 입력을 구분하기 위해 2가지 함수를 만드는 방법보다 event.target.name으로 input 엘리먼트를 구분하는 방법이 더 효율적
+
+## 09.29
+error는 파이어베이스가 에러와 관련된 여러 내용이 자세히 적혀있는 객체
+Auth.js 파일의 `onSubmit`함수에는 try-catch문으로 에러를 콘솔에 출력하는 코드가 들어있다.
+=>`setError`함수에 `error.message`를 전달해서 error 상태를 출력한다.
