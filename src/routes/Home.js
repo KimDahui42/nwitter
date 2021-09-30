@@ -1,9 +1,9 @@
 import {dbService } from "fbase";
 import { useEffect, useState } from "react";
 
-const Home = () => {
+const Home = ({ userObj }) => {
     const [nweet, setNweet] = useState("");
-    const [nweets, setNweets] = useState("");
+    const [nweets, setNweets] = useState([]);
 
     const getNweets = async () => {
         const dbNweets = await dbService.collection("nweets").get();
@@ -22,7 +22,8 @@ const Home = () => {
         event.preventDefault();
         await dbService.collection("nweets").add({
             text: nweet,
-            createdAt: Date.now()
+            createdAt: Date.now(),
+            creatorId:userObj.uid
         });
         setNweet("");
     };
@@ -36,7 +37,8 @@ const Home = () => {
     };
 
     return (
-        <form onSubmit={onSubmit}>
+        <>
+            <form onSubmit={onSubmit}>
             <input
                 value={nweet}
                 onChange={onChange}
@@ -44,8 +46,16 @@ const Home = () => {
                 placeholder="What's on your mind?"
                 maxLength={120}
             />
-            <input type="submit" value="Nweet" />
-        </form>
+                <input type="submit" value="Nweet" />
+            </form>
+            <div>
+                {nweets.map((nweet) => (
+                    <div key={nweet.id}>
+                        <h4>{nweet.text}</h4>
+                    </div>
+                ))}
+            </div>
+        </>
     );
 };
 

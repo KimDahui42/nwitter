@@ -59,3 +59,7 @@ Auth.js 파일의 `onSubmit`함수에는 try-catch문으로 에러를 콘솔에 출력하는 코드가 
 FirebaseError: [code=not-found]: The project undefined does not exist or it does not contain an active Cloud Datastore or Cloud Firestore database
 ```
 	* .env 파일 `REACT_APP_PROJECT_ID`를 `REACT_APP_PROJECT_I`으로 오타, 수정완료
+* `nweets.map is not a function`
+	* 선언 오류 `const [nweets, setNweets] = useState([]);`을 `const [nweets, setNweets] = useState("");`로 오기입, 수정완료
+<br>
+get 함수로 파이어스토어의 데이터를 받아와 화면을 렌더링할 때만 화면에 반영됨<br>
