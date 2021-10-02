@@ -63,3 +63,12 @@ FirebaseError: [code=not-found]: The project undefined does not exist or it does
 	* 선언 오류 `const [nweets, setNweets] = useState([]);`을 `const [nweets, setNweets] = useState("");`로 오기입, 수정완료
 <br>
 get 함수로 파이어스토어의 데이터를 받아와 화면을 렌더링할 때만 화면에 반영됨<br>
+
+## 10.02
+`타이핑을 정확하게 하자`<br>
+creatorId와 현재 로그인한 사람의 uid를 비교해서 같으면 <삭제>버튼과 <수정>버튼을 보여준다.
+
+## 10.03
+`window.confirm`은 확인을 클릭하면 `true`를, 취소를 클릭하면 `false`를 반환한다.<br>
+doc함수는 문서 경로를 문자열로 입력 받아서 문서를 반환한다.
+* alert창에서 한글 깨짐
