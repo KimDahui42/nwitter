@@ -45,7 +45,7 @@ const Auth = () => {
             provider = new firebaseInstance.auth.GithubAuthProvider();
         }
         const data = await authService.signInWithPopup(provider);
-        //ºñµ¿±â ÀÛ¾÷ÀÌ±â ¶§¹®¿¡ `async-await`¹®À» »ç¿ëÇÑ´Ù.
+        //ë¹„ë™ê¸° ì‘ì—…ì´ê¸° ë•Œë¬¸ì— `async-await`ë¬¸ì„ ì‚¬ìš©í•œë‹¤.
         console.log(data);
     }
     return (

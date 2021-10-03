@@ -5,7 +5,8 @@ const Nweet = ({ nweetObj, isOwner }) => {
     const [editing, setEditing] = useState(false);
     const [newNweet, setNewNweet] = useState(nweetObj.text);
     const onDeleteClick = async()=>{
-        const ok = window.confirm("»èÁ¦ÇÏ½Ã°Ú½À´Ï±î?");
+        const ok = window.confirm("ì‚­ì œí•˜ì‹œê² ìŠµë‹ˆê¹Œ?");
+        window.alert("í…ŒìŠ¤íŠ¸");
         console.log(ok);
         if (ok) {
             console.log(nweetObj.id);

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
-//Redirect´Â from ÇÁ·Ó½º¿¡ ÀÖ´Â °ªÀ» Á¶°ÇÀ¸·Î »ı°¢ÇØ to ÇÁ·Ó½º¿¡ ÀÖ´Â °ªÀ¸·Î ÁÖ¼Ò¸¦ ÀÌµ¿½ÃÄÑ ÁØ´Ù
+//RedirectëŠ” from í”„ë¡­ìŠ¤ì— ìˆëŠ” ê°’ì„ ì¡°ê±´ìœ¼ë¡œ ìƒê°í•´ to í”„ë¡­ìŠ¤ì— ìˆëŠ” ê°’ìœ¼ë¡œ ì£¼ì†Œë¥¼ ì´ë™ì‹œì¼œ ì¤€ë‹¤
 import Auth from "routes/Auth";
 import Home from "routes/Home";
 import Profile from "routes/Profile";
