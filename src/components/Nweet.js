@@ -6,7 +6,6 @@ const Nweet = ({ nweetObj, isOwner }) => {
     const [newNweet, setNewNweet] = useState(nweetObj.text);
     const onDeleteClick = async()=>{
         const ok = window.confirm("삭제하시겠습니까?");
-        window.alert("테스트");
         console.log(ok);
         if (ok) {
             console.log(nweetObj.id);
