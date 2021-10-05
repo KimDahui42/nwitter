@@ -90,8 +90,27 @@ FileReader : 업로드한 파일을 웹 브라우져에 출력할 수 있는 브
 Uncaught (in promise) FirebaseError: Firebase Storage: No default bucket found. Did you set the 'storageBucket' property when initializing the app? (storage/no-default-bucket)
 ```
 |코드|이유|
-|.....|......|
+|:---------:|:------:|
 |storage/bucket-not-found|Cloud Storage에 구성된 버킷이 없습니다.|
+
 	* 또 오타였을것같아서...fbase.js 파일을 확인했다. 
 	* fbase.js 파일 `process.env.REACT_APP_STORAGE_BUCKETREACT_APP_PROJECT_ID`를 `process.env.REACT_APP_STRAGE_BUCKET`으로 오타, 수정완료
 
+## 10.06
+`where`함수는 필드, 조건, 찾으려는 값 순서로 인자를 전달해서 사용한다.
+* 07-1 에서 작업했던 내용
+```
+const getMyNweets = async () => {
+        const nweets = await dbService
+            .collection("nweets")
+            .where("creatorID", "==", userObj.uid)
+            .orderBy("createdAt", "asc")
+            .get();
+
+        console.log(nweets.docs.map((doc) => doc.data()));
+    };
+
+    useEffect(() => {
+        getMyNweets();
+    }, []);
+```
