@@ -83,3 +83,10 @@ FileReader : 업로드한 파일을 웹 브라우져에 출력할 수 있는 브
 <br> 리액트 생명주기 함수처럼 파일 선택 후 '웹 브라우저가 파일을 인식하는 시점','웹 브라우저 파일 인식이 끝난 시점'등을 포함하고 있어서 시점까지 함께 관리해 줘야 URL을 얻을 수 있다.
 ### UUID 라이브러리
 > 범용 고유 식별자(아이디 라이브러리)
+
+## 10.05
+* 오류 메세지
+```
+Uncaught (in promise) FirebaseError: Firebase Storage: No default bucket found. Did you set the 'storageBucket' property when initializing the app? (storage/no-default-bucket)
+```
+
