@@ -114,3 +114,7 @@ const getMyNweets = async () => {
         getMyNweets();
     }, []);
 ```
+
+`userObj`는 `App.js` 파일에서 사용한 `authService`의 `onAuthStateChanged`에 인자로 전달한 user이다.
+<br> user를 userObj상태로 관리
+<br> 리액트는 상태나 프롭스의 내용물이 너무 많으면 그 안에 있는 작은 변화를 제대로 인식하지 못한다=>userObj 크기 줄이기
