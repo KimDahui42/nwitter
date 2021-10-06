@@ -118,3 +118,5 @@ const getMyNweets = async () => {
 `userObj`는 `App.js` 파일에서 사용한 `authService`의 `onAuthStateChanged`에 인자로 전달한 user이다.
 <br> user를 userObj상태로 관리
 <br> 리액트는 상태나 프롭스의 내용물이 너무 많으면 그 안에 있는 작은 변화를 제대로 인식하지 못한다=>userObj 크기 줄이기
+* npm run build 오류(해결)
+    * 오류 내역을 보니 NweetFactoy가 정의되어있지 않다 해서 코드를 확인해 보니 몇 가지 import문을 작성하지 않았던걸 발견해 추가했다.

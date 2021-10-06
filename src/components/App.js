@@ -5,7 +5,6 @@ import Auth from "../routes/Auth";
 
 function App() {
     const [init, setInit] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
     const [userObj, setUserObj] = useState(null);
     useEffect(() => {
         authService.onAuthStateChanged((user)=> {
@@ -16,7 +15,7 @@ function App() {
                 updateProfile: (args) => user.updateProfile(args),
             });
         } else {
-            setIsLoggedIn(false);
+            setUserObj(false);
         }
             setInit(true);
         });

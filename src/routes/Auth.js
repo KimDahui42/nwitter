@@ -1,39 +1,7 @@
 import { authService,firebaseInstance } from "fbase";
-import { useState } from "react";
+import AuthForm from "../components/AuthForm";
 
 const Auth = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
-    const [newAccount, setNewAccout] = useState(true);
-    const [error, setError] = useState("");
-    const onChange = (event) => {
-        const {
-            target: { name, value },
-        } = event;
-        if (name === "email") {
-            setEmail(value);
-        } else if (name === "password") {
-            setPassword(value);
-        }
-    };
-
-    const onSubmit = async (event) => {
-        event.preventDefault();
-        try {
-            let data;
-            if (newAccount) {
-                //create newAccount
-                data = await authService.createUserWithEmailAndPassword(email, password);
-            } else {
-                //log in
-                data = await authService.signInAndRetrieveDataWithCredential(email, password);
-            }
-            console.log(data);
-        } catch (error) {
-            setError(error.message);
-        }
-    };
-    const toggleAccount = () => setNewAccout((prev) => !prev);
     const onSocialClick = async (event) => {
         const {
             target: { name },
@@ -46,31 +14,10 @@ const Auth = () => {
         }
         const data = await authService.signInWithPopup(provider);
         //비동기 작업이기 때문에 `async-await`문을 사용한다.
-        console.log(data);
     }
     return (
         <div>
-            <form onSubmit={onSubmit}>
-                <input
-                    name="email"
-                    type="email"
-                    placeholder="Email"
-                    required
-                    value={email}
-                    onChange={onChange}
-                />
-                <input
-                    name="password"
-                    type="password"
-                    placeholder="Password"
-                    requited
-                    value={password}
-                    onChange={onChange}
-                />
-                <input type="submit" value={newAccount ? "Create Account" : "Log In"} />
-                {error}
-            </form>
-            <span onClick={toggleAccount}>{newAccount ? "Sign In" : "Create Account"}</span>
+            <AuthForm/>
             <div>
                 <button onClick={onSocialClick} name="google">
                     Continue with Google
