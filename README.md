@@ -93,7 +93,7 @@ Uncaught (in promise) FirebaseError: Firebase Storage: No default bucket found. 
 |:---------:|:------:|
 |storage/bucket-not-found|Cloud Storage에 구성된 버킷이 없습니다.|
 
-	* 또 오타였을것같아서...fbase.js 파일을 확인했다. 
+* 또 오타였을것같아서...fbase.js 파일을 확인했다. 
 	* fbase.js 파일 `process.env.REACT_APP_STORAGE_BUCKETREACT_APP_PROJECT_ID`를 `process.env.REACT_APP_STRAGE_BUCKET`으로 오타, 수정완료
 
 ## 10.06
@@ -120,3 +120,7 @@ const getMyNweets = async () => {
 <br> 리액트는 상태나 프롭스의 내용물이 너무 많으면 그 안에 있는 작은 변화를 제대로 인식하지 못한다=>userObj 크기 줄이기
 * npm run build 오류(해결)
     * 오류 내역을 보니 NweetFactoy가 정의되어있지 않다 해서 코드를 확인해 보니 몇 가지 import문을 작성하지 않았던걸 발견해 추가했다.
+# 완료 후기
+빠르게 진행하며 전체적으로 익힐 수 있어 좋았다. 그리고 수정/추가하고 싶은 부분들을 발견해서 앞으로 추가해나갈계획이다.
+## 수정사항
+* 모바일 웹뷰로 보았을 때 구글 계정으로 로그인이 안 됨
