@@ -39,8 +39,8 @@ function App() {
                     userObj={userObj}
                 />
             ) : (
-                    "initializing..."
-                )}
+                "initializing..."
+            )}
       </>
   );
 }
