@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import AppRouter from "components/Router";
 import { authService } from "fbase";
-import Auth from "../routes/Auth";
-
+import Auth from "routes/Auth.js";
 function App() {
     const [init, setInit] = useState(false);
     const [userObj, setUserObj] = useState(null);
