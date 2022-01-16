@@ -1,10 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
     "\\src\\components",
     "\\src\\routes"
   ],
-  "SelectedNode": "\\src\\components\\Nweet.js",
+  "SelectedNode": "\\src\\routes\\Profile.js",
   "PreviewInSolutionExplorer": false
 }
