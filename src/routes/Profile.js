@@ -1,12 +1,19 @@
 import { authService,dbService } from "fbase";
 import { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
+import { doc } from "firebase/firestore";
 
 const Profile = ({ userObj,refreshUser }) => {
     const history = useHistory();
     const [newDisplayName, setNewDisplayName] = useState(userObj.displayName);
+    const [newBio,setNewBio]=useState("");
     const [isChanging, setIsChanging] = useState(false);
     const onNicknameClick = () => setIsChanging((prev)=>!prev);
+
+    useEffect(() => {
+        newBio=doc()
+    });
+
     const onChange = (event) => {
         const {
             target: { value },
@@ -30,7 +37,7 @@ const Profile = ({ userObj,refreshUser }) => {
 
     return (
         <div className="container">
-            <button type="button" onClick={onNicknameClick}>이름 변경</button>
+            <button type="button" onClick={onNicknameClick}>프로필 수정</button>
             {isChanging ? (
                 <form onSubmit={onSubmit} className="profileForm">
                     <input
@@ -51,7 +58,10 @@ const Profile = ({ userObj,refreshUser }) => {
                     />
                 </form>
             ) : (
+                <section>
                     <div>{newDisplayName}</div>
+                    <div>{}</div>
+                    </section>
                     )
                 }
             <span className="formBtn cancelBtn logOut" onClick={onLogoutClick}>
